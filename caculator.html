@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="caculator.css">
+</head>
+<body>
+	<main>
+		<h1>JS Caculator</h1>
+		<h3>number1</h3>
+		<input type="number" id="number1">
+		<h3>number2</h3>
+		<input type="number" id="number2">
+		<h3>Operate way?</h3>
+		<select id="operator">
+    		<option value="+">+</option>
+    		<option value="-">-</option>
+    		<option value="*">×</option>
+    		<option value="/">÷</option>
+  		</select>
+		<button onclick="caculate()" id="button">Add</button>
+		<h3 id="result"></h3>
+	</main>
+	<script src="caculator.js"></script>
+</body>
+</html>
