@@ -15,7 +15,7 @@ document.getElementById("operator").addEventListener("change", function() {
 function caculate() {
 	let num1 = parseFloat(document.getElementById("number1").value);
 	let num2 = parseFloat(document.getElementById("number2").value);
-	if (!num1 || !num2) {
+	if (isNaN(num1) || isNaN(num2)) {
 		alert("不可為空值或是非數字");
 		return;
 	}
