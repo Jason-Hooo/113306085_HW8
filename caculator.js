@@ -13,8 +13,8 @@ document.getElementById("operator").addEventListener("change", function() {
 });
 
 function caculate() {
-	let num1 = parseInt(document.getElementById("number1").value);
-	let num2 = parseInt(document.getElementById("number2").value);
+	let num1 = parseFloat(document.getElementById("number1").value);
+	let num2 = parseFloat(document.getElementById("number2").value);
 	if (!num1 || !num2) {
 		alert("不可為空值或是非數字");
 		return;
@@ -29,6 +29,10 @@ function caculate() {
 	} else if (operator == "*") {
 		result += (num1 * num2).toFixed(2);
 	} else {
+		if (num2 == 0) {
+			alert("除法分母不可為0");
+			return;
+		}
 		result += (num1 / num2).toFixed(2);
 	}
 
